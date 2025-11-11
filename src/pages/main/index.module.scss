@@ -1,0 +1,79 @@
+.main {
+    min-height: calc(100vh - 100px);
+
+}
+
+.mainConteiner {
+    padding: 10px;
+    // height: calc(100vh - 50px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: auto;
+
+    .mainCForm,
+    .mainCInput,
+    .mainCBtn {
+        @media (max-width:768px) {
+            transform: skew(var(--main-rotate-zero));
+        }
+    }
+
+}
+
+.mainCForm {
+    background: var(--main-color-w);
+    display: flex;
+    padding-left: 25px;
+    transform: skew(var(--main-rotate-minus));
+    border: 1px solid #000;
+
+
+}
+
+.mainCInput {
+    transform: skew(var(--main-rotate-plus));
+    color: var(--main-color-d);
+
+    &:focus {
+        text-decoration: underline;
+        color: var(--main-color-d);
+    }
+
+}
+
+.mainCBtn {
+    margin-left: 20px;
+    border: 2px solid var(--main-color-w);
+    background-color: var(--main-color-m);
+
+    &:hover {
+        background-color: var(--main-color-mh);
+    }
+
+    p {
+        transform: skew(var(--main-rotate-plus));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width:768px) {
+            transform: skew(var(--main-rotate-zero));
+        }
+    }
+
+
+}
+
+.mainCPErrorMessage {
+    margin: 20px 0px 0px;
+    color: var(--main-color-mh);
+}
+
+.mainCP {
+    margin-top: 30px;
+}
